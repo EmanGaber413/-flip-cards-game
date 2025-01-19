@@ -5,15 +5,26 @@
   }
   
 
-  .show:hover img{ opacity: 100%!important;
+  /* .show:hover img{ opacity: 100%!important;
     transition: all 2sec;
     transition-timing-function:ease-in-out;
-  }
+  } */
 
   
 .success{
-  background: #36f536 !important;
+  background: #53f053 !important;
   height: 100px !important;
-  width: 100px!important;
+  width: 100%!important;
   opacity: 100%!important;
 }
+
+.finish{
+  
+  opacity:75%;
+  
+ 
+}
+.green{
+ background-color: #4df04d;
+}
+
