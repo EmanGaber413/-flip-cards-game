@@ -4,15 +4,18 @@ let scoreRate=0
 let Game=document.querySelector(".game")
 
   let images = document.querySelectorAll("img");
-  
+ 
   images.forEach((image) => {
+    
     image.addEventListener("click",function () {
-      if(testimages.length<2){
+      if(image.getAttribute("flag")==="false"){
+      if(testimages.length<2 ){
        
     image.classList.add("opacity-100");
+    image.setAttribute("flag","true")
     testimages.push(image); 
 
-  if (  testimages[0].getAttribute("role") === testimages[1].getAttribute("role") && scoreRate<16)  {
+  if (  testimages[0].getAttribute("role") === testimages[1].getAttribute("role") && scoreRate<16 )  {
 
         testimages.forEach((selectedItem) => {
        
@@ -38,11 +41,14 @@ let Game=document.querySelector(".game")
         testimages = [];
       }
     }
-     
+  
       else{ testimages.forEach ((selectedItem)=>{selectedItem.classList.remove("opacity-100");})
     testimages=[]}
-  })
-
+  }
+  else { testimages.forEach ((selectedItem)=>{selectedItem.setAttribute("flag","false")})
+  testimages.forEach ((selectedItem)=>{selectedItem.classList.remove("opacity-100");})
+  testimages=[]}
+})
 
 })
         
